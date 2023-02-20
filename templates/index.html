@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>A Complete Online Solution For Student Performance </title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="#home" class="logo">Edu Assist</a>
+
+      <nav class="navbar">
+         <a href="#home">Home</a>
+         <a href="#about">About</a>
+         <a href="#reviews">Reviews</a>
+         <a href="#contact">Contact us</a>
+         <a href="drag" "#teachers">Upload</a>
+         <a href="video" "#courses">Courses</a>
+         <a href="download" "#download">Notes</a>
+
+         <!-- <a href="form/form.html" "#login">login</a> -->
+         <a href="form">Signup</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="row">
+
+      <div class="content">
+         <h3>education <span>made simple</span></h3>
+         <a href="#contact" class="btn">contact us</a>
+      </div>
+
+      <div class="image">
+         <img src="{% static 'images/homg-img.svg' %}" alt="">
+      </div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- couter section stars  -->
+
+<section class="count">
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-graduation-cap"></i>
+         <div class="content">
+            <h3>150k+</h3>
+            <p>colleges</p>
+         </div>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-user-graduate"></i>
+         <div class="content">
+            <h3>1300L+</h3>
+            <p>students</p>
+         </div>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-chalkboard-user"></i>
+         <div class="content">
+            <h3>80k+</h3>
+            <p>teachers</p>
+         </div>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-face-smile"></i>
+         <div class="content">
+            <h3>100%</h3>
+            <p>satisfaction</p>
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- couter section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <div class="row">
+
+      <div class="image">
+         <img src="{% static 'images/about-img.svg' %}" alt="">
+      </div>
+
+      <div class="content">
+         <h3>why choose us?</h3>
+         <p>Prepares students into self-reliant, independent thinking, globally relevant, skilled and socially useful citizens of the nation embedded with values to contribute in their own mite to the society.</p>
+         <a href="#contact" class="btn">contact us</a>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+
+<!-- reviews section starts  -->
+
+<section class="reviews" id="reviews">
+
+   <h1 class="heading"> student's <span>reviews</span></h1>
+
+   <div class="swiper reviews-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!</p>
+            <div class="user">
+               <img src="{% static 'images/pic-1.png' %}" alt="">
+               <div class="user-info">
+                  <h3>Kuldeep</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!</p>
+            <div class="user">
+               <img src="{% static 'images/pic-2.png' %}" alt="">
+               <div class="user-info">
+                  <h3>Aditya</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!</p>
+            <div class="user">
+               <img src="{% static 'images/pic-3.png' %}" alt="">
+               <div class="user-info">
+                  <h3>jaseem akthar</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!</p>
+            <div class="user">
+               <img src="{% static 'images/pic-4.png' %}" alt="">
+               <div class="user-info">
+                  <h3>manoj</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!</p>
+            <div class="user">
+               <img src="{% static 'images/pic-5.png' %}" alt="">
+               <div class="user-info">
+                  <h3>varun</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-sta"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!</p>
+            <div class="user">
+               <img src="{% static 'images/pic-6.png' %}" alt="">
+               <div class="user-info">
+                  <h3>karan</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+   </div>
+
+</section>
+
+<!-- reviews section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+   <h1 class="heading"><span>Contact</span> us</h1>
+
+   <div class="row">
+
+      <div class="image">
+         <img src="{% static 'images/contact-img.svg' %}" alt="">
+      </div>
+
+      <form action="contact" method="POST">
+        {% csrf_token %}
+         <span>your name</span>
+         <input type="text" required placeholder="enter your full name" maxlength="50" name="name" class="box">
+         <span>your email</span>
+         <input type="email" required placeholder="enter your valid email" maxlength="50" name="email" class="box">
+         <span>your number</span>
+         <input type="number" required placeholder="enter your valid number" max="9999999999" min="0" name="number" class="box" onkeypress="if(this.value.length == 10) return false;">
+         <span>select course</span>
+         <input type="text" required placeholder="enter your course" maxlength="50" name="course" class="box">
+         <input type="submit" value="send message" class="btn" name="send">
+       </div>
+     </form>
+   </div>
+ </section>
+
+<!-- contact section ends -->
+
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section>
+
+      <div class="share">
+         <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+         <a href="https://twitter.com/" class="fab fa-twitter"></a>
+         <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+         <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+         <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+      </div>
+
+      <div class="credit">&copy; copyright @ 2022 by <span>mr. Jaseem & Manoj</span> | all rights reserved!</div>
+
+   </section>
+
+</footer>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- swiper js link  -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
+
+{% static '' %}

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login/Signup</title>
+	<link rel="stylesheet" href="{% static 'css/form.css' %}">
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap' %}" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form method="POST" action="/signup">
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<!-- <input type="text" name="txt" placeholder="User name" required=""> -->
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<input type="confirmpassword" name="confirmpassword" placeholder="Confirm password" required="">
+					<button>Sign up</button>
+					<h5 style="color: white">{{msg}}</h5>
+				</form>
+			</div>
+
+			<div class="login">
+				<form method="POST" action="/signin">
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+					<h5 style="color:black;">{{msg}}</h5>
+				</form>
+			</div>
+	</div>
+</body>
+</html>

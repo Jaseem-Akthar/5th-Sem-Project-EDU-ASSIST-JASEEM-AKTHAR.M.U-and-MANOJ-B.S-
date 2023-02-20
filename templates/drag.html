@@ -1,0 +1,105 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag, Drop & Browse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'css/drag.css' %}" />
+
+<style>
+
+.gun {
+backface-visibility: hidden;
+background: #1c1232;
+border: 0;
+border-radius: .375rem;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: Circular,Helvetica,sans-serif;
+font-size: 1.125rem;
+font-weight: 700;
+letter-spacing: -.01em;
+line-height: 1.3;
+padding: 1rem 1.25rem;
+position: relative;
+text-align: left;
+text-decoration: none;
+transform: translateZ(0) scale(1);
+transition: transform .2s;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.gun:disabled {
+color: #787878;
+cursor: auto;
+}
+
+.gun:not(:disabled):hover {
+transform: scale(1.05);
+}
+
+.gun:not(:disabled):hover:active {
+transform: scale(1.05) translateY(.125rem);
+}
+
+.gun:focus {
+outline: 0 solid transparent;
+}
+
+.gun:focus:before {
+border-width: .125rem;
+content: "";
+left: calc(-1*.375rem);
+pointer-events: none;
+position: absolute;
+top: calc(-1*.375rem);
+transition: border-radius;
+user-select: none;
+}
+
+.gun:focus:not(:focus-visible) {
+outline: 0 solid transparent;
+}
+
+.gun:not(:disabled):active {
+transform: translateY(.125rem);
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <form action="file_upload" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3>Upload your File :</h3>
+      <div class="drag-area">
+        <div class="icon">
+          <i class="{% static 'fas fa-images' %}"></i>
+        </div>
+
+        <!-- <span class="header">Drag & Drop</span>
+        <span class="header">or <span class="button">browse</span></span> -->
+        <input class="gun" type="file" name="upfile">
+        <span class="support">Supports: JPEG, JPG, PNG</span>
+      </div>
+      <div>
+        <input type="submit" value="Upload" class="download">
+
+      </div>
+  </div>
+  </form>
+  <script src="{% static 'js/draag.js' %}"></script>
+</body>
+
+</html>
